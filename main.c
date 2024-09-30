@@ -1,5 +1,6 @@
-#include "inout.c"
-#include "constants.h"
+#include "headers/inout.h"
+#include "headers/constants.h"
+#include <stdio.h>
 
 double packet_delay(int* packets, int* links) {
     return 0;

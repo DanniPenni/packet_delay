@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "constants.h"
+#include "headers/constants.h"
 
 void take_input(int* numPack, int* numLinks, int* packets, int *(*(*links)), char hosts[2]) {
     printf("Please enter your start-point (1 capital letter): \n");

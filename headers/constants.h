@@ -1,5 +1,5 @@
 #ifndef CONSTANTS_H
-#define COSNTANTS_H
+#define CONSTANTS_H
 
 struct Link {
     int prop_speed;
