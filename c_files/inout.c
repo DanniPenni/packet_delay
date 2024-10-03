@@ -14,7 +14,7 @@ void take_input(int* numPackets, int* numLinks, int *(*packets), struct Link **l
     *links = (struct Link*) malloc(sizeof(struct Link) * (*numLinks));
 
     for (int i = 0; i < *numLinks; ++i) {
-        printf("--- Link %d ---\n", i);
+        printf("--- Link %d ---\n", i+1);
         printf("Please enter the propogation speed across this link (m/s):\n");
         scanf(" %d", &(*links)[i].prop_speed);
         printf("Please enter the length of this link (m):\n");
