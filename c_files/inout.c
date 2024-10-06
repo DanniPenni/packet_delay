@@ -35,3 +35,29 @@ void take_input(int* numPackets, int* numLinks, int *(*packets), struct Link **l
         (*packets)[i] = in_bits * 8;
     }
 }
+
+void output_matrix(int numPackets, int numLinks, double *prop_delays, double **trans_delays, double **queue_delays) {
+    printf("\n-- PRINTING MATRIX --\n");
+
+    printf("-- Propogation Delays --\n");
+    for (int l = 0; l < numLinks; ++l) {
+        printf("%f ", prop_delays[l]);
+    }
+    printf("\n");
+
+    printf("-- Transmission Delays --\n");
+    for (int p = 0; p < numPackets; ++p) {
+        for (int l = 0; l < numLinks; ++l) {
+            printf("%f ", trans_delays[p][l]);
+        }
+        printf("\n");
+    }
+
+    printf("-- Queueing Delays --\n");
+    for (int p = 0; p < numPackets; ++p) {
+        for (int l = 0; l < numLinks - 1; ++l) {
+            printf("%f ", queue_delays[p][l]);
+        }
+        printf("\n");
+    }
+}
